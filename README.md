@@ -1,4 +1,3 @@
-```markdown
 # 🍽️ Restaurant Name & Menu Generator
 
 A fun, AI-powered app that generates **unique restaurant names** and curated menu items for any cuisine you choose! Built with **Streamlit**, **LangChain**, and **OpenAI**, this project is perfect for entrepreneurs, hobbyists, and anyone dreaming up their next food venture.
@@ -35,50 +34,3 @@ A fun, AI-powered app that generates **unique restaurant names** and curated men
 
 ---
 
-## 🧑‍💻 Quickstart
-
-**1. Install dependencies:**
-```
-pip install openai langchain langchain-community langchain-chains streamlit python-dotenv
-```
-
-**2. Set up your OpenAI API key:**
-Create a `.env` file in your project:
-```
-OPENAI_API_KEY=your_openai_key_here
-```
-
-**3. Run the app:**
-```
-streamlit run app.py
-```
-*(Make sure your helper functions are in `langchain_helper.py` as per the main code.)*
-
----
-
-## 📦 File Structure
-
-```
-├── app.py                 # Main Streamlit UI
-├── langchain_helper.py    # Contains `generate_restaurant_name_and_items()`
-├── .env.example           # Environment variable template
-```
-
----
-
-## 🎨 Sample Output
-
-```
-Cuisine: Italian
-
-Restaurant Name: La Bella Tavola
-
-Menu Items:
-- Truffle Risotto
-- Sicilian Caponata
-- Burrata Caprese Salad
-- Gnocchi all’Amatriciana
-- Pistachio Tiramisu
-```
-
-```
