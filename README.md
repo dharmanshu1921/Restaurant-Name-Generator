@@ -81,21 +81,4 @@ Menu Items:
 - Pistachio Tiramisu
 ```
 
----
-
-## 🛡️ Security & Notes
-
-- **Never commit your real API key**. Use `.env.example` for sharing.
-- Private keys required for OpenAI API.
-- Can be easily extended to include logo generation, expansion to beverage menus, etc.
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-*Built with ❤️ using Streamlit and OpenAI. Try dreaming up your next culinary adventure today!*
 ```
