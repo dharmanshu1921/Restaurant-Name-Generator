@@ -1,0 +1,319 @@
+Build Chatbot Webapp with LangChain
+Introduction:
+In this tutorial, we are learning how to build Chatbot Webapp with LangChain. LangChain is a Python module. The LangChain is used to build applications using standard languages. It provides a framework for communication standards for other documents and interacts with various APIs. LangChain is designed to be easy to use even if the developer needs to become more familiar with the language structure.
+
+Large language models (LLM), artificial intelligence technology has advanced to the level where humans can easily interact with chatbots, similar to human interaction. Shortly, Chatbots will become an important part of our daily life. It can be used in various types of problem-solving skills.
+
+What is LangChain?
+LangChain is an open-source tool. It is written in Python programming language. LangChain can enable large-scale language models to be data-sensitive and mediated. Most business LLMs, such as GPT-3.5 and GPT-4, have limitations on the information they work with. For example, nowadays, ChatGPT is a trending AI tool. But ChatGPT can only answer questions that it has seen before. So, if you are given any unknown programming or competitive code, then ChatGPT cannot answer those questions. LangChain is a framework. It that can orchestrate a series of prompts to achieve the desired result.
+
+Everything beyond September 2021 is still being determined. This is the main problem that LangChain solves. Whether it is a Word document or a single PDF, we can feed the document into the LLM. After feeding the documents, we can get a human-like response. It has wrappers for tools such as vector databases, chat models, and embedding functions, making it easy to build AI applications using only LangChain. LangChain is an LLM environment.
+
+Describe the working principle of LangChain.
+LangChain works by providing a set of abstractions that facilitate interaction with language constructs. The working principle of LangChain is discussed below -
+
+Agents:
+
+The main components of LangChain are Agents. Agents are doing specific tasks: creating text, writing content, summarization, and answering questions.
+
+Chains:
+
+A chain is a string of agents. It is used to complete a specific task. For example, a string can be used on a particular topic to write a long text or answer a question to the point.
+
+Memories:
+
+The memory is used to store the status of the call to the Agent. This allows the Agent to learn from past interactions and make better decisions in the future. So, by using memory, LangChain can improve its performance.
+
+Why we used LangChain?
+There are several reasons for using the LangChain, which are discussed below -
+
+1. Powerful:
+
+LangChain is very much more powerful than humans. So, we used LangChain.
+
+2. Easy to use:
+
+LangChain is very much easy to use. Developers can also easily use LangChain without properly knowing it.
+
+3. Extensible:
+
+One of the important features of LangChain is that it is extensible. So, users can add their chains and agents in the framework of LangChain.
+
+4. Flexible:
+
+Flexibility is one of the important features of LangChain. The flexible framework can be used to build various types of applications.
+
+Installation of LangChain:
+So, to run any program in LangChain, you must install the LangChain module. You can easily install the LangChain module by using the following command, which is given in below -
+
+!pip install langchain
+
+What are the modules in LangChain?
+There are various kinds of modules in LangChain. By using these modules, developers can easily build an application. The names of the modules are given in below -
+
+Models
+Memory
+Prompt
+Chain
+Agent
+Call Backs
+Now we are briefly discussing these modules, which are discussed below -
+
+1. Models:
+Models are one of the modules of LangChain. It refers to the Large Language Module (LLM). Their size characterizes these LLMs. They have neural networks with many parameters and are trained on large amounts of anonymous data. The tech company has produced several numbers of Large Language Modules (LLMs), which are given in below -
+
+Google creates LaMDA.
+Google also creates BERT.
+Google creates PaLM.
+OpenAI developed ChatGPT, GPT 3, GPT 3.5, GPT 4.
+Meta AI developed LLaMA.
+OpenAI developed GPT 4, which is more successful than GPT 3.
+Example:
+
+Now we are given an example of the Models module of LangChain in Python. The example is now given in below -
+
+from langchain.llms import OpenAI  
+import os  
+   
+os.environ['OPENAI_API_KEY'] = 'Enter your openAI API key'  
+model = OpenAI(temperature=0.8)  
+   
+p = model("Please Tell me the weather report")  
+   
+print(p)  
+Output:
+
+Now we compile the above code in Python, and after successful compilation, we run it. Then the output is given below -
+
+Q: What is the weather report for today?
+A: Saturday, 10:00 am, Haze, 31°C
+2. Memory:
+Chains and Agents in LangChain run in unattended mode by default. They handle all queries on their own. However, in some applications, such as chatbots, storing short-term and long-term past interactions is important. For this reason, memory is needed in LangChain. The memory is used to store the status of the call to the Agent.
+
+Two types of memory components are present in LangChain. First, LangChain provides a service to manage and control previous conversations designed. It is standard and useful regardless of how they are used. Second, LangChain provides an easy way to integrate these electronic devices into the chain. This makes them versatile in any situation.
+
+There are several methods of implementing memory in LangChain, which are described below -
+
+I. Summary Memory:
+
+The summary memory stores a summary of any history.
+
+II. Buffer Memory:
+
+Buffer memory is the simplest form of memory. It can easily store previous messages as a buffer.
+
+III. Sequence to Sequence Memory:
+
+The sequence-to-sequence memory is used to represent the history of the conversation. This is used to improve the performance of language constructs, like answering the users' questions.
+
+Example:
+
+Now we are given an example of the Memory module of LangChain in Python. The example is now given in below -
+
+from langchain.memory import ChatMessageHistory  
+  
+h = ChatMessageHistory()  
+h.add_user_message("Hello coders!!")  
+  
+h.add_ai_message("Welcome to JavaTpoint!!")  
+h.messages  
+Output:
+
+Now we compile the above code in Python, and after successful compilation, we run it. Then the output is given below -
+
+[HumanMessage(content='Hello coders!!', additional_kwargs={}),
+AIMessage(content='Welcome to JavaTpoint!!', additional_kwargs={})]
+3. Prompt:
+The prompt is another important module of LangChain. We know that instructions are ideas we give to any system to refine our answers more specifically based on our data. It is a very powerful tool. Prompts reports are based on user input, other static data, and fixed strings. Prompts are used in many applications, which are discussed below:
+
+I. Code generation:
+
+The prompt is used in the code generation system. It can easily generate code from the description of any natural language.
+
+II. Chatbot:
+
+The prompt is also used to create Chatbot. Chatbot can easily understand the user's query and then generate the result depending upon this query.
+
+III. Answering the questions:
+
+The prompt is used to answer the questions of users. It can easily answer any question in a correct and informative way.
+
+IV. Summarization of article:
+
+The prompt is also used for the summarization of any article. It can easily summarize a brief text in a sentence.
+
+Example 1:
+
+from langchain import PromptTemplate  
+   
+temp = "My favourite programming language is {name}"  
+   
+prompt = PromptTemplate(input_variables=["name"], temp = temp)  
+exp = prompt.format(name="Python")  
+   
+print(exp)  
+Output:
+
+Now we compile the above code in Python, and after successful compilation, we run it. Then the output is given below -
+
+My favourite programming language is Python
+Example 2:
+
+Now we are given another example of the Prompt module of LangChain in Python. Here we basically set a long template and check that prompt module can work in any kind of template. The example is now given in below -
+
+from langchain import PromptTemplate  
+  
+template = """ 
+I want to join a software company as a programmer. 
+What is the good role of a{product}? 
+"""  
+prompt = PromptTemplate(  
+    input_variables=["product"],  
+    template=template,  
+)  
+prompt.format(product="software company")  
+Output:
+
+Now we compile the above code in Python, and after successful compilation, we run it. Then the output is given below -
+
+I want to join a software company as a programmer.
+What is the good role of a software company
+4. Chain:
+The Chain is another important module of LangChain. Chains are a way to combine various components into a unified application. For example, you can create a chain that uses user input. Creating it for using a PromptTemplate. Then it sends the response to the LLM. Multiple chains can be created by combining multiple chains with other products. The chain can easily solve any complex task.
+
+LLMChain is one of the widely used platforms. According to the current model, it can format two types of keys: the input key and the memory key (if any). After that, the formatted string is sent to the LLM. Then the return object is created by the LLM.
+
+After the model is called, steps can be taken to call the model. This is especially important when you want to use the output of one call as the input of another call. Each chain has an input and an output in this chain sequence. This output is used as the next step input. And this process runs continuously in the chain sequence.
+
+Example 1:
+
+Now we are given an example of the Chain module of LangChain in Python. If you set a prompt template with a black space and set a chain to fill up this blank. Then chain module is helps to complete this prompt template by fill up the blank space. The example is now given in below -
+
+from langchain.chat_models import ChatOpenAI  
+from langchain.prompts.chat import (  
+    ChatPromptTemplate,  
+    HumanMessagePromptTemplate,  
+)  
+human_message_prompt = HumanMessagePromptTemplate(  
+        prompt=PromptTemplate(template=" I want to join a software company as a programmer. What is the good role of a{name}?",  
+            input_variables=["name"],  
+        )  
+    )  
+chat_prompt_template = ChatPromptTemplate.from_messages([human_message_prompt])  
+chat = ChatOpenAI(temperature=0.7)  
+  
+chain = LLMChain(llm=chat, prompt=chat_prompt_template)  
+print(chain.run("software company "))  
+Output:
+
+Now we compile the above code in Python, and after successful compilation, we run it. Then the output is given below -
+
+I want to join a software company as a programmer.
+What is the good role of a software company
+5. Agent:
+The Agent is another important module of LangChain. Some applications may require predetermination of LLM/other tools and uncertainty based on user input. Such systems include "agents" with access to various devices. Agents have access to the device's system and can then decide which of these tools should be called based on user input. The Agent can use multiple tools. This can easily decide the next action of a module using the previous action output. It takes the previous action's output and then uses it as input for the next action. Agents are mainly two types which are -
+
+a. Plan and execute agent -
+
+The plan and execute Agent decide how to complete a set of actions first, then do all the work without updating the plan.
+
+b. Action agent -
+
+The action agent is used to decide the next action using the output of the previous action in every time step.
+
+Example 1:
+
+Now we are given an example of the Agent module of LangChain in Python. This module is help to give answer for your query. For this, we need to import some modules which are OpenAI, ConversationChain and ConversationBufferMemory. The example is now given in below -
+
+from langchain.llms import OpenAI  
+from langchain.chains import ConversationChain  
+from langchain.memory import ConversationBufferMemory  
+import os  
+os.environ['OPENAI_API_KEY'] = 'Please enter your api key here'  
+   
+model = OpenAI(temperature=0.6)  
+chain = ConversationChain(llm=model,  
+    verbose=True,  
+    memory=ConversationBufferMemory()  
+    )  
+   
+print(chain.predict(input="Please tell me something about JavaTpoint"))  
+Output:
+
+Now we compile the above code in Python, and after successful compilation, we run it. Then the output is given below -
+
+> Entering the new chain......
+Prompt after formatting:
+The following is a friendly conversation between people and AI. AI is talkative. It can provide a lot of unique content. If the AI does not know the answer to a question, it will say it doesn't.
+Current conversation:
+Human: Please tell me something about JavaTpoint.
+AI:
+> Finished chain.
+Sure! JavaTpoint offers many programming languages and technologies for people who want to learn and master. After checking the website constantly, I can confidently say that JavaTpoint has great content and features that make it the go-to place for programmers of all levels. Programming languages such as Java, Python, and C+ are well documented, with extensive tutorials, templates, and clear explanations to help develop the necessary skills.
+Build Chatbot Webapp with LangChain:
+We are known about all modules of LangChain by this article. We also here learn about Chatbot. Now we need to build a Chatbot Webapp with the use of LangChain. This Webapp can be used to build the script and title of YouTube videos. So, firstly we need to install some modules to build this Webapp with LangChain. The modules are now given in below -
+
+! pip install streamlit   
+! pip install langchain  
+! pip install OpenAI  
+! pip install WikipediaAPIWrapper  
+Step 1:
+Now sets the value of the OPENAI_API_KEY environment variable. It is set to your API key. Then you need to create an OpenAI account to get the API code. After that, you will get your API code. An environment variable is used to store the configuration results of this task. In this case, an environment variable is stored in the API key.
+
+Must set the API key as an environment variable because when you are using API, that needs authentication. You can securely and easily access your code without coding by storing your API key as an environment variable. This process helps keep sensitive data like API keys separate from data centers. It can also help to reduce the risk of exposure.
+
+Now we write the program code to sets the value of the OPENAI_API_KEY environment variable. So, the code is now given below -
+
+import os  
+os.environ['OPENAI_API_KEY'] = "Please enter your API key here"  
+Step 2:
+In the below code, the first line imports the "streamlit" module. "streamlit" module is used to build any web applications. Then we set the webapp title as "JavaTpoint". The third line creates text input fields that the user can type. To create prompt templates, we used the "PromptTemplate" class. It is strings which is used to create prompts. The first standard is now used to create the title of a YouTube video. The second prompt template is used to generate scripts for YouTube videos. The "input_variables" parameter of the "PromptTemplate" class specifies the variables used in the prompt template.
+
+Various kind of methods are used to collect user input. The variable "wiki_research" is used to store research results from Wikipedia. The template parameter of the "PromptTemplate" class specifies the text of the prompt template.
+
+The template for the current title is "Name of the YouTube video is {concept}". The template of text hint template is "Create a beautiful YouTube video script under the title "{title}" using knowledge and information from Wikipedia research: {wiki_research}".
+
+So, now we give the code which is given in below -
+
+import streamlit as st  
+st.title('JavaTpoint')  
+input_text = st.text_input('Please enter your text here: ')  
+from langchain.prompts import PromptTemplate  
+title_template = PromptTemplate(  
+    input_variables = ['concept'],  
+    template=' Name of the YouTube video is {concept}'  
+)  
+script_template = PromptTemplate(  
+    input_variables = ['title', 'wiki_research'],  
+  template=''''' Create a beautiful YouTube video script under the title "{title}" using knowledge and information from Wikipedia research: {wiki_research}'''  
+)  
+Step 3:
+For the ConversationBufferMemory class, we create two instances. This class stores the conversation history between the user and the language model. This information can be used to improve target users' language understanding and create better and more integrated responses. The "memoryP" object stores session parameters for the name. The memoryQ object stores the text communication buffer.
+
+The input_key parameter specifies the variable used to store user input. The "memory_key" parameter specifies the key used to store communication parameters in the model.
+
+Here we used the LLMChain class. This class is used to link multiple instructions. The code then creates two instances of the LLMChain class. The ChainP object is used to create lists based on user input. The "script_chainS" object generates scripts from news and Wikipedia searches.
+
+The LLM parameter specifies the broad language model used to render the text. The prompt parameter specifies the prompt used to render the text. The verbose parameter specifies whether the LLMChain object prints information about its creation. The output_key parameter specifies the key used to store the output in the model.
+
+So, now we give the code which is given in below -
+
+memoryP = ConversationBufferMemory(input_key='concept', memory_key='chat_history')  
+memoryQ = ConversationBufferMemory(input_key='title', memory_key='chat_history')  
+model = OpenAI(temperature=0.9)  
+chainP = LLMChain(llm=model, prompt=title_template, verbose=True, output_key='title', memory=memoryT)  
+chainQ = LLMChain(llm=model, prompt=script_template, verbose=True, output_key='script', memory=memoryS)  
+Step 4:
+Here we built an interface for interacting with the Wikipedia API. It is used to create articles and Wikipedia studies from the text, build essays using meaning and education, and present articles, articles, and Wikipedia studies in the Extended section of the webpage created with Streamlit. So, the code is now given below -
+
+wikipedia = WikipediaAPIWrapper()  
+if input_text:  
+    title = chainT.run(input_text)  
+    wiki_research = wikipedia.run(input_text)  
+    script = chainS.run(title=title, wiki_research=w_research)  
+    qp.write(title)  
+    qp.write(script)  
+    with st.expander('Wikipedia-based exploration: '):  
+        qp.info(w_research)  
+Conclusion:
+So, in this tutorial, we are learning how to build Chatbot Webapp with LangChain. LangChain is designed to be easy to use even if the developer is unfamiliar with the language structure. Here we discussed all the modules of LangChain. And lastly, we share step-by-step procedures for building a Chatbot Webapp.
